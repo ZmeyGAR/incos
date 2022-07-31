@@ -14,9 +14,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-    href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;600;700;900&family=Nunito+Sans:wght@400;700;900&display=swap"
-    rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;600;700;900&family=Nunito+Sans:wght@400;700;900&family=Raleway&display=swap" rel="stylesheet">
 
 <!-- STYLESHEET -->
 <link href="./styles/notification.min.css" rel="stylesheet">
@@ -28,6 +26,10 @@
 
 <!-- SCRIPTS -->
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js" defer></script>
+<script src="./scripts/hover.min.js" defer></script>
 <script src="./scripts/notification.min.js" defer></script>
 <script src="./scripts/AOS.min.js" defer></script>
 <script src="./scripts/swiper-bundle.min.js"></script>
@@ -43,11 +45,13 @@
         widget.dataset.pfId = 'c12750a5-af26-4c4f-b973-b1bca950a5da';
         widget.src = 'https://widget.profeat.team/script/widget.js?id=c12750a5-af26-4c4f-b973-b1bca950a5da&now=' + Date.now();
         document.head.appendChild(widget);
-    })()</script>
+    })()
+</script>
 
 </head>
 
 <body>
+
     <header class="header">
     <div class="header__container container">
         <div class="header__logo">
@@ -82,129 +86,107 @@
                             <span class="hero-info-body--col-big">заказ</span>
                         </div>
                     </div>
-
-                    <!-- <button class="button button--inline hero-info-body__button" data-tilt data-tilt-glare
-                        data-tilt-max-glare="0.8" data-tilt-scale="1.1"
-                        onclick="location='https://mrqz.me/620e4614a35c3d003fe38f9c?roistat_visit=4612964'">Получить скидку</button> -->
+                    <div class="hero-info-body--row hero-info-body__button">
+                        <button class="button button--inline form-callback__button button--anim-pulse" data-tilt
+                            data-tilt-glare data-tilt-max-glare="0.8" data-tilt-axis="x" data-tilt-scale="1.1">
+                            Оставить заявку
+                        </button>
+                    </div>
                 </div>
 
             </div>
         </div>
+    </div>
 
-        <div class="hero__banner">
-            <!-- <picture><source srcset="image/banner_img.webp" type="image/webp"><img src="image/banner_img.png" alt=""></picture> -->
+    <div class="hero__banner">
+        <div class="man" data-aos="fade-right">
+            <!-- <picture>
+                <source srcset="image/man.webp" type="image/webp">
+                <img src="image/man.png" alt="" >
+            </picture> -->
+        </div>
+        <div class="place" data-aos="zoom-in">
+            <!-- <div class="mirror"></div>
+            <div class="mirror mirror--2"></div> -->
+            <!-- <picture>
+                <source srcset="image/banner_img.webp" type="image/webp">
+                <img src="image/banner_img.png" alt="">
+            </picture> -->
         </div>
     </div>
 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
     <script>
-        VANTA.WAVES({
-            el: "body",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 1.00,
-            scaleMobile: 1.00,
-            color: 0xc8c8c8
-        })
+
+
     </script>
-
 </section>
 
-        <section class="section form-callback">
-    <div class="container form-callback__container">
-        
-        <form class="form form-callback__form js-form-callback">
-            <input type="text" name="name" placeholder="Имя" required>
-            <input type="tel" name="tel" placeholder="Телефон"
-                pattern="\+?[0-9]\s?[\(]{0,1}[0-9]{3}[\)]{0,1}\s?\d{3}[-]{0,1}\s?\d{2}[-]{0,1}\s?\d{2}" required
-                minlength="11" maxlength="18">
-            <button class="button button--inline form-callback__button button--anim-pulse" data-tilt data-tilt-glare
-                data-tilt-max-glare="0.8" data-tilt-axis="x" data-tilt-scale="1.1">Хочу скидку!</button>
-        </form>
-    </div>
-</section>
 
         <section class="section about-product">
     <div class="container about-product__container">
-        <h2 class="about-product__title" data-aos="fade-right"><span>Качество</span>нашей мебели</h2>
+        <h2 class="about-product__title" data-aos="fade-right">Качество нашей мебели</h2>
         <div class="about-product__content about-product-content">
             <ul class="about-product-content__list">
 
-                <li class="about-product-content__item about-product-content-item" data-aos="fade-left">
-                    <h3 class="about-product-content-item__head">
-                        каркас
-                    </h3>
-                    <div class="about-product-content-item__body">
-                        В своём производстве мы используем только:
-                        <ol>
-                            <li>многослойную березовую фанеру, которая обладает такими характеристиками, как повышенная
-                                влагостойкость, экологичность и устойчивость к деформациям;</li>
-                            <li>древесину хвойных пород - прочность, надежность и долговечность;</li>
-                            <li>древесину ценных пород дерева это не только оригинальная текстура и благородный внешний
-                                вид, а
-                                так же высокая прочность и плотность, которые обеспечивают надежность и длительный срок
-                                службы
-                                мебели.</li>
-                            <li>В каркасе все детали собраны с клеем на специализированную клеевую скобу. Это устраняет
-                                любые
-                                скрипы в процессе эксплуатации.</li>
-                        </ol>
+
+                <li class="about-product-content__item about-item">
+                    <h4 class="about-item__title">
+                        <span>Супер-прочные каркасы</span>
+                    </h4>
+                    <div class="about-item__content">
+                        <p>
+                            Все каркасы выполнены из древесины хвойных пород и фанеры повышенной прочности
+                        </p>
+                        <p>
+                            Скрипы - исключены! Высокая прочность и долговечность соединений обеспечиваются двойным
+                            сцеплением (креплением) - на клей и скобу
+                        </p>
                     </div>
+
                 </li>
 
-                <li class="about-product-content__item about-product-content-item" data-aos="fade-left">
-                    <h3 class="about-product-content-item__head">
-                        Механизмы
-                    </h3>
-                    <div class="about-product-content-item__body">
-                        Надежность - вот главный критерий механизмов трансформации. В наших моделях используются только
-                        проверенные временем конструкции механизмов с усиленными рычагами. Срок их эксплуатации гораздо
-                        длительнее, чем у дешевых аналогов.
-                    </div>
+                <li class="about-product-content__item about-item">
+                    <h4 class="about-item__title">
+                        Супер-прочные каркасы
+                    </h4>
+                    <p>
+                        Все каркасы выполнены из древесины хвойных пород и фанеры повышенной прочности
+                    </p>
+                    <p>
+                        Скрипы - исключены! Высокая прочность и долговечность соединений обеспечиваются двойным
+                        сцеплением (креплением) - на клей и скобу
+                    </p>
                 </li>
 
-                <li class="about-product-content__item about-product-content-item" data-aos="fade-left">
-                    <h3 class="about-product-content-item__head">
-                        Ортопедическое наполнение
-                    </h3>
-                    <div class="about-product-content-item__body">
-                        Мы уделяем особое внимание эргономике мягкой мебели,
-                        поскольку это ваш комфорт, а он очень важен для нас.
-                        Качество вашего отдыха зависит от верного и точного сочетания внутренних элементов настила:
-                        блока независимых пружин, высокоэластичной ППУ HR, ППУ с эффектом памяти Memory Foam.
-                        Надежность используемых материалов, подтверждена плодотворным сотрудничеством с проверенными и
-                        лучшими производителями
-                        Европы и России.
-                    </div>
+                <li class="about-product-content__item about-item">
+                    <h4 class="about-item__title">
+                        Супер-прочные каркасы
+                    </h4>
+                    <p>
+                        Все каркасы выполнены из древесины хвойных пород и фанеры повышенной прочности
+                    </p>
+                    <p>
+                        Скрипы - исключены! Высокая прочность и долговечность соединений обеспечиваются двойным
+                        сцеплением (креплением) - на клей и скобу
+                    </p>
                 </li>
 
-                <li class="about-product-content__item about-product-content-item" data-aos="fade-left">
-                    <h3 class="about-product-content-item__head">
-                        Мебельные ткани
-                    </h3>
-                    <div class="about-product-content-item__body">
-                        Широкий выбор качественного и стильного текстиля для мебели. Под ваше настроение и стиль жизни
-                        мы подберем элегантный велюр, стильную рогожку, мягкий шенилл, уютную искусственную замшу,
-                        натуральную кожу или прочную флоковую ткань. Абсолютно все ткани используемые в нашем
-                        производстве прошли ряд экспертиз: на устойчивость к истиранию, на пиллингуемость, на
-                        устойчивость окраски.
-                        Надежные ткани под любые запросы.
-                        Мы уверенны в качестве нашей продукции!
-                    </div>
+                <li class="about-product-content__item about-item">
+                    <h4 class="about-item__title">
+                        Супер-прочные каркасы
+                    </h4>
+                    <p>
+                        Все каркасы выполнены из древесины хвойных пород и фанеры повышенной прочности
+                    </p>
+                    <p>
+                        Скрипы - исключены! Высокая прочность и долговечность соединений обеспечиваются двойным
+                        сцеплением (креплением) - на клей и скобу
+                    </p>
                 </li>
+
 
             </ul>
         </div>
-    </div>
-
-    <div class="about-product__label" data-aos="zoom-in">
-        Супер-прочный каркас
-        <span>Гарантия 5 лет</span>
     </div>
 </section>
 
