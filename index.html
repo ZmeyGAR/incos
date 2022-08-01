@@ -14,39 +14,32 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;600;700;900&family=Nunito+Sans:wght@400;700;900&family=Raleway&display=swap" rel="stylesheet">
+<link
+    href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;600;700;900&family=Nunito+Sans:wght@400;700;900&family=Raleway&display=swap"
+    rel="stylesheet">
 
 <!-- STYLESHEET -->
 <link href="./styles/notification.min.css" rel="stylesheet">
 <link href="./styles/AOS.min.css" rel="stylesheet">
-<link href="./styles/swiper-bundle.min.css" rel="stylesheet">
+<!-- <link href="./styles/swiper-bundle.min.css" rel="stylesheet"> -->
 <link href="./styles/leaflet.css" rel="stylesheet">
 
-<link rel="stylesheet" href="./styles/style.min.css?v1" type="text/css">
+<link rel="stylesheet" href="./styles/style.min.css?v2" type="text/css">
 
 <!-- SCRIPTS -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" defer></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" defer></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js" defer></script>
-<script src="./scripts/hover.min.js" defer></script>
+
 <script src="./scripts/notification.min.js" defer></script>
 <script src="./scripts/AOS.min.js" defer></script>
-<script src="./scripts/swiper-bundle.min.js"></script>
+<!-- <script src="./scripts/swiper-bundle.min.js"></script> -->
 <script src="./scripts/parallax.tilt.min.js" defer></script>
 <script src="./scripts/leaflet.js" defer></script>
 <script src="./scripts/leaflet.init.js" defer></script>
 <script src="./scripts/ibg.js" defer></script>
-<script src="./scripts/main.min.js?v1" defer></script>
-
-<script>
-    (function () {
-        var widget = document.createElement('script');
-        widget.dataset.pfId = 'c12750a5-af26-4c4f-b973-b1bca950a5da';
-        widget.src = 'https://widget.profeat.team/script/widget.js?id=c12750a5-af26-4c4f-b973-b1bca950a5da&now=' + Date.now();
-        document.head.appendChild(widget);
-    })()
-</script>
+<script src="./scripts/main.min.js?v2" defer></script>
 
 </head>
 
@@ -101,13 +94,13 @@
     </div>
 
     <div class="hero__banner">
-        <div class="man" data-aos="fade-right">
+        <div class="man" data-aos="zoom-in" data-aos-delay="1000">
             <!-- <picture>
                 <source srcset="image/man.webp" type="image/webp">
                 <img src="image/man.png" alt="" >
             </picture> -->
         </div>
-        <div class="place" data-aos="zoom-in">
+        <div class="place" data-aos="fade-right" data-aos-delay="1000">
             <!-- <div class="mirror"></div>
             <div class="mirror mirror--2"></div> -->
             <!-- <picture>
@@ -566,14 +559,112 @@
     </div>
 </section>
 
+        <section class="section create-product">
+    <div class="create-product__img" data-aos="fade-right" data-aos-anchor-placement="center">
+        <picture>
+            <source srcset="image/create-product_img_full.webp" media="(min-width: 1400px)" type="image/webp">
+            <source srcset="image/create-product_img_full.png" media="(min-width: 1400px)" type="image/webp">
+            <source srcset="image/create-product_img.png" type="image/png">
+            <img src="image/create-product_img.png" alt="СОЗДАЙТЕ СВОЙ ДИВАН" data-aos="fade-down"
+                data-aos-anchor-placement="center" class="aos-init aos-animate">
+        </picture>
+    </div>
+    <div class="create-product__body">
+        <h2 class="create-product__title">Гарантия</h2>
+        <div class="guarantee">
+            <ul class="guarantee__list">
+
+                <li class="guarantee__item">
+                    2 года на внутреннее наполнение и чехол
+                </li>
+
+                <li class="guarantee__item">
+                    5 лет на элементы каркаса
+                </li>
+
+            </ul>
+        </div>
+
+        <p>
+            Мы уверены в качестве наших товаров!
+            <br>Мы даем гарантию производителя на весь ассортимент.
+            <br>
+            <br>
+            Высокое качество продукции
+            <br>определяется, прежде всего,
+            <br>технологическими особенностями производственного
+            процесса, в основе
+            <br>которого лежит <b>80% ручного труда</b>.
+            Внутренний контроль сырья и материалов,
+            <br>а также промежуточные экспертизы
+            <br>обеспечивают высокое качество.
+        </p>
+    </div>
+
+    <span class="create-product__footnote">
+        Наша мебель соответствуют требованиям безопасности<br>
+        и нормативно-техническим документам ГОСТ 16371-2014.
+    </span>
+</section>
+
+        <section class="section delivery">
+    <h2 class="delivery__title">Доставка</h2>
+
+    <div class="delivery__banner"></div>
+
+    <div class="delivery__content">
+
+        <p>Бесплатная доставка до адреса и бесплатная сборка мебели по Крыму. </p>
+
+        <p>Наша продукция представлена в 16 регионах России</p>
+
+        <p>Индивидуальные условия. Расчет стоимости произведут наши менеджеры после оценки габаритов заказа.</p>
+
+        <div class="footnote">
+            <p>
+                В случае если
+                нашего представителя нет в Вашем городе,
+                Вы все равно можете сделать заказ
+                на понравившуюся Вам модель. </p>
+            <p>
+                Для этого достаточно связаться с нами любым удобным
+                для Вас способом: оставить заявку на сайте или
+                позвонить нам по телефону <a href="tel:+79786643053">+7-978-664-30-53</a>.
+                Мы доставим Вам мебель транспортной компанией.
+            </p>
+        </div>
+    </div>
+
+    <div class="delivery__advanced">
+
+        <svg viewBox="0 0 1041 778" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M1040.56 389.773C1040.56 355.725 1039.69 321.398 1040.85 287.35C1042.88 226.511 992.513 162.043 938.097 141.391C833.897 102.04 730.564 61.0154 626.652 20.5486C555.449 -7.08051 484.245 -6.80143 413.041 21.1067C310.287 61.0154 207.533 101.203 104.49 141.112C42.5487 165.113 0 224.557 0 288.746C0 355.446 0 422.147 0 488.847C0 553.594 41.9698 613.038 104.49 637.319C206.665 676.948 308.55 717.415 411.304 756.207C435.907 765.417 462.536 772.115 488.586 775.743C538.082 782.441 585.841 773.789 632.152 755.649C734.327 715.182 837.659 677.227 939.545 635.644C1003.22 609.689 1037.38 560.292 1040.27 493.033C1041.72 458.706 1040.56 424.1 1040.56 389.773Z"
+                fill="#5B5B5B" />
+            <path
+                d="M1040.56 388.493C1040.56 353.901 1041.72 319.588 1040.27 284.997C1037.38 217.766 1003.22 168.668 939.545 142.445C837.949 100.88 734.616 62.6613 632.152 22.4903C585.84 4.07862 538.082 -4.56934 488.586 2.40479C462.247 6.03134 435.907 12.7265 411.304 21.9324C308.84 60.7085 206.955 101.158 104.49 140.772C41.9698 165.32 0 224.74 0 289.46C0 356.133 0 422.805 0 489.478C0 553.64 42.5487 613.06 104.49 637.051C207.244 676.943 310.287 716.835 413.041 757.006C484.245 784.623 555.449 785.181 626.652 757.564C730.564 717.393 833.896 676.106 938.097 636.772C992.513 616.128 1042.88 551.687 1040.85 490.873C1039.69 456.839 1040.56 422.805 1040.56 388.493ZM1000.62 389.33C1000.91 389.33 1000.91 389.33 1001.2 389.33C1001.2 422.247 1001.2 455.165 1001.2 488.083C1000.91 539.134 969.358 583.489 920.152 602.459C815.661 642.63 711.46 683.638 606.97 723.809C551.107 745.289 494.086 746.405 438.223 725.483C331.417 685.033 225.19 642.909 118.673 601.343C70.3356 582.374 39.6542 537.739 39.6542 487.525C39.6542 423.363 41.1015 359.201 39.0753 295.039C37.6281 245.105 73.2301 192.938 124.173 173.968C227.795 135.192 330.259 93.6264 433.881 54.2923C490.034 32.812 547.634 31.9751 603.786 53.1765C710.882 93.3475 817.398 134.634 923.336 177.316C969.358 195.728 996.855 230.877 1000.33 279.417C1002.64 315.683 1000.62 352.506 1000.62 389.33Z"
+                fill="#E8E8E8" />
+
+            <foreignObject>
+                <div class="shape shape-left"></div>
+                <div class="shape shape-right"></div>
+                <p class="first-text">
+                    В случае если
+                    нашего представителя нет в Вашем городе,
+                    Вы все равно можете сделать заказ
+                    на понравившуюся Вам модель. </p>
+                <p class="second-text">
+                    Для этого достаточно связаться с нами любым удобным
+                    для Вас способом: оставить заявку на сайте или
+                    позвонить нам по телефону <a href="tel:+79786643053">+7-978-664-30-53</a>.
+                    Мы доставим Вам мебель транспортной компанией.
+                </p>
+            </foreignObject>
+        </svg>
 
 
-
-
-
-        
-
-        
+    </div>
+</section>
 
         <section class="section map-section">
     <div class="container map-section__container">
@@ -808,7 +899,7 @@
         </li>
         <li class="cooperation__item">
             <div class="cooperation__text" data-aos="fade-up">
-                <span>c отельерами и рестораторами.</span>
+
                 <p>
                     Так же изготавливаем<br>
                     мягкую мебель для<br>
@@ -827,68 +918,8 @@
     </ul>
 </section>
 
-        <section class="section guarantee">
-    <div class="guarantee__content">
-        <h2 class="guarantee__title" data-aos="fade-left">
-            Один из лучших производителей Юга России
-        </h2>
 
-        <ul class="guarantee__list">
-            <li class="guarantee__item">
-                Собственное Конструкторское Бюро
-            </li>
 
-            <li class="guarantee__item">
-                Более 30 моделей мебели
-            </li>
-
-            <li class="guarantee__item">
-                Более 30 моделей мебели
-            </li>
-
-            <li class="guarantee__item">
-                5 лет специализации на нестандартных изделиях
-            </li>
-
-            <li class="guarantee__item">
-                Ежегодно посещаем мебельные выставки
-                в Европе, чтобы быть в тренде
-
-            </li>
-
-            <li class="guarantee__item">
-                Более 7 лет
-                успешно конкурируем
-                с зарубежными брендами
-            </li>
-
-            <li class="guarantee__item">
-                Работаем только с проверенными производителями и поставщиками комплектующих
-            </li>
-
-            <li class="guarantee__item">
-                Проведены все необходимые испытания по качеству продукции - сертификат соответствия качества мебели
-            </li>
-        </ul>
-    </div>
-</section>
-
-        <section class="section create-product">
-    <div class="create-product__img" data-aos="fade-right" data-aos-anchor-placement="center">
-        <picture><source srcset="image/create-product_img.webp" type="image/webp"><img src="image/create-product_img.png" alt="СОЗДАЙТЕ СВОЙ ДИВАН" data-aos="fade-down"
-            data-aos-anchor-placement="center"></picture>
-    </div>
-    <div class="create-product__body">
-        <h2 class="create-product__title">СОЗДАЙТЕ<br>СВОЙ ДИВАН</h2>
-        <p>У нас вы не просто покупаете готовый диван.<br><br>
-            Мы можем адаптировать его под ваши предпочтения не только по цвету<br>
-            и модулям, но и по сантиметрам - как сделали бы это для себя!<br><br>
-            Для этого закажите индивидуальную конфигурацию при выборе дивана.</p>
-
-        <span>ИСПОЛЬЗУЙТЕ НАШИ ВОЗМОЖНОСТИ
-            ДЛЯ СОБСТВЕННОЙ ВЫГОДЫ!</span>
-    </div>
-</section>
 
         <section class="section form-callback">
     <div class="container form-callback__container">
