@@ -20,30 +20,30 @@
 
 <!-- STYLESHEET -->
 
-<link rel="stylesheet" href="./styles/rSlider.min.css?v3">
-<link href="./styles/sweetalert.borderless.theme.min.css?v3" rel="stylesheet" id="sweetAlert-style">
-<link href="./styles/notification.min.css?v3" rel="stylesheet">
-<link href="./styles/AOS.min.css?v3" rel="stylesheet">
-<link href="./styles/leaflet.css?v3" rel="stylesheet">
-<link rel="stylesheet" href="./styles/style.min.css?v3" type="text/css">
+<link rel="stylesheet" href="./styles/rSlider.min.css?v4">
+<link href="./styles/sweetalert.borderless.theme.min.css?v4" rel="stylesheet" id="sweetAlert-style">
+<link href="./styles/notification.min.css?v4" rel="stylesheet">
+<link href="./styles/AOS.min.css?v4" rel="stylesheet">
+<link href="./styles/leaflet.css?v4" rel="stylesheet">
+<link rel="stylesheet" href="./styles/style.min.css?v4" type="text/css">
 
 <!-- SCRIPTS -->
-<script src="./scripts/AOS.min.js?v3" defer></script>
-<script src="./scripts/parallax.tilt.min.js?v3" defer></script>
-<script src="./scripts/leaflet.js?v3" defer></script>
-<script src="./scripts/leaflet.init.js?v3" defer></script>
+<script src="./scripts/AOS.min.js?v4" defer></script>
+<script src="./scripts/parallax.tilt.min.js?v4" defer></script>
+<script src="./scripts/leaflet.js?v4" defer></script>
+<script src="./scripts/leaflet.init.js?v4" defer></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js" defer></script>
 
-<script src="./scripts/sweetalert2.all.min.js?v3" defer id="sweetAlert-script"></script>
-<script src="./scripts/notification.min.js?v3" defer></script>
+<script src="./scripts/sweetalert2.all.min.js?v4" defer id="sweetAlert-script"></script>
+<script src="./scripts/notification.min.js?v4" defer></script>
 
 
 
-<script src="./scripts/rSlider.min.js?v3" defer id="rSlider"></script>
-<script src="./scripts/wNum.min.js?v3" defer id="rSlider"></script>
-<script src="./scripts/main.min.js?v3" defer></script>
+<script src="./scripts/rSlider.min.js?v4" defer id="rSlider"></script>
+<script src="./scripts/wNum.min.js?v4" defer id="rSlider"></script>
+<script src="./scripts/main.min.js?v4" defer></script>
 
 </head>
 
@@ -59,6 +59,10 @@
             <svg class="logo logo--white">
                 <use xlink:href="icons/sprite.svg#Logo_inCOS"></use>
             </svg>
+            <svg class="logo logo--white logo--mini">
+                <use xlink:href="icons/sprite.svg#Logo_inCOS--mini"></use>
+            </svg>
+
         </div>
 
         <ul class="header__contacts contacts">
@@ -100,8 +104,8 @@
                         </div>
                     </div>
                     <div class="hero-info-body--row hero-info-body__button">
-                        <button class="button button--inline button--anim-pulse quiz-btn" data-tilt data-tilt-glare
-                            data-tilt-max-glare="0.8" data-tilt-axis="x" data-tilt-scale="1.1">
+                        <button class="button button--inline button--anim-pulse form-callback-btn" data-tilt
+                            data-tilt-glare data-tilt-max-glare="0.8" data-tilt-axis="x" data-tilt-scale="1.1">
                             Оставить заявку
                         </button>
                     </div>
@@ -1068,9 +1072,7 @@
         <h3 class="form-callback__title"> оставьте заявку и мы с вами свяжемся </h3>
         <form class="form form-callback__form js-form-callback">
             <input type="text" name="name" placeholder="Имя" required>
-            <input type="tel" name="tel" placeholder="Телефон"
-                pattern="\+?[0-9]\s?[\(]{0,1}[0-9]{3}[\)]{0,1}\s?\d{3}[-]{0,1}\s?\d{2}[-]{0,1}\s?\d{2}" required
-                minlength="11" maxlength="18">
+            <input type="tel" name="tel" placeholder="Телефон" required minlength="11" maxlength="18">
             <button class="button button--inline form-callback__button button--anim-pulse" data-tilt data-tilt-glare
                 data-tilt-max-glare="0.8" data-tilt-axis="x" data-tilt-scale="1.1">Обратный звонок</button>
         </form>
@@ -1616,7 +1618,6 @@
 
                 } else {
                     this.QResults = []
-                    console.log('result: break', result);
                     break
                 }
             }
@@ -1655,16 +1656,33 @@
     const quiz = new Quiz(document.querySelector('.quiz-section__button'), {
         fetch: 'quiz.json'
     });
-    const heroQuiz = new Quiz(document.querySelector('.hero .quiz-btn'), {
-        fetch: 'quiz.json'
-    })
+</script>
+<script>
+    document.querySelector('.form-callback-btn').onclick = function () {
+        const formCallback = document.querySelector('.form-callback');
 
+        Swal.fire({
+            html: formCallback.cloneNode(true),
+
+            showConfirmButton: false,
+            showCloseButton: true,
+
+            customClass: {
+                'container': 'form-callback'
+            },
+
+            didOpen: () => reinitCallbackForms()
+        })
+    }
 </script>
         <footer class="footer">
     <div class="footer__container container">
         <div class="footer__logo">
             <svg class="logo logo--white">
                 <use xlink:href="icons/sprite.svg#Logo_inCOS"></use>
+            </svg>
+            <svg class="logo logo--white logo--mini">
+                <use xlink:href="icons/sprite.svg#Logo_inCOS--mini"></use>
             </svg>
         </div>
         <ul class="footer__contacts contacts">
@@ -1685,61 +1703,73 @@
 </footer>
 
 <script>
+    function reinitCallbackForms() {
+        const forms = [...document.querySelectorAll('.js-form-callback')];
 
-    const forms = [...document.querySelectorAll('.js-form-callback')];
-
-    for (let i = 0; i < forms.length; i++) {
-        const inputName = forms[i].querySelector('input[type="text"][name="name"]');
-        const inputTel = forms[i].querySelector('input[type="tel"][name="tel"]');
-
-        inputTel.addEventListener('input', function () {
-            this.setCustomValidity('');
-            this.checkValidity();
-        })
-        inputTel.addEventListener('invalid', function () {
-            this.setCustomValidity(`
-            Пожалуйста, укажите номер телефона!
-            Возможно, здесь какая то ошибка!
-            Напишите номер телефона в числовом формате без пунктуации и пробелов`)
-        })
-
-        forms[i].addEventListener('submit', async function (e) {
-            e.preventDefault();
-
-            if (inputTel.validity && inputName.validity) {
-
-                result = await postFormData('/mail.php', new FormData(forms[i]));
-
-                if (result.success) {
-                    iziToast.success({
-                        title: 'Спасибо!',
-                        overlay: true,
-                        position: 'topRight',
-                        message: 'Ваше сообщение было отправлено!'
-                    });
-                    document.querySelectorAll('.section.form-callback').forEach(item => item.remove())
-                } else {
-                    console.error('Ошибка отправки данных!')
+        for (let i = 0; i < forms.length; i++) {
+            const inputs = {
+                name: {
+                    el: forms[i].querySelector('input[type="text"][name="name"]'),
+                    invalidMessage: ``,
+                    pattern: ''
+                },
+                tel: {
+                    el: forms[i].querySelector('input[type="tel"][name="tel"]'),
+                    invalidMessage: `
+                    Пожалуйста, укажите номер телефона!
+                    Возможно, здесь какая то ошибка!
+                    Напишите номер телефона в числовом формате без пунктуации и пробелов`,
+                    pattern: /[\+]{0,1}[0-9]\s?[\(]{0,1}[0-9]{3}[\)]{0,1}\s?\d{3}[-]{0,1}\s?\d{2}[-]{0,1}\s?\d{2}/
                 }
             }
-        })
-    }
+            const { name, tel } = inputs;
+            [name, tel].map(inp => {
+                inp.el.addEventListener('input', function () {
+                    this.setCustomValidity('');
+                    if ((inp.pattern && this.required && !this.value.match(inp.pattern)) || (this.required && !this.value.trim())) {
+                        this.setCustomValidity(inp.invalidMessage)
+                    }
+                    this.checkValidity();
+                })
+                inp.el.addEventListener('invalid', () => {
+                    inp.el.setCustomValidity(inp.invalidMessage)
+                })
+            });
 
-    async function postFormData(url, data) {
-        let response = await fetch(url, {
-            method: 'POST',
-            body: data
-        });
-        return await response.json();
-    }
 
-    const options = {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Key': '04da14a64dmsh1644ace6e1643f4p127aa2jsnb556768c924d',
-            'X-RapidAPI-Host': 'telize-v1.p.rapidapi.com'
+            forms[i].addEventListener('submit', async function (e) {
+                e.preventDefault();
+
+                if (name.el.validity && tel.el.validity) {
+
+                    result = await postFormData('/mail.php', new FormData(forms[i]));
+
+                    if (result.success) {
+                        iziToast.success({
+                            title: 'Спасибо!',
+                            overlay: true,
+                            position: 'topRight',
+                            message: 'Ваше сообщение было отправлено!'
+                        });
+                        document.querySelectorAll('.section.form-callback').forEach(item => item.remove())
+                    } else {
+                        console.error('Ошибка отправки данных!')
+                    }
+                }
+            })
         }
-    };
+
+        async function postFormData(url, data) {
+            let response = await fetch(url, {
+                method: 'POST',
+                body: data
+            });
+            return await response.json();
+        }
+    }
+
+    reinitCallbackForms()
+
 </script>
 
 <script>
