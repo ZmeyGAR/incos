@@ -19,27 +19,31 @@
     rel="stylesheet">
 
 <!-- STYLESHEET -->
-<link href="./styles/notification.min.css" rel="stylesheet">
-<link href="./styles/AOS.min.css" rel="stylesheet">
-<!-- <link href="./styles/swiper-bundle.min.css" rel="stylesheet"> -->
-<link href="./styles/leaflet.css" rel="stylesheet">
 
-<link rel="stylesheet" href="./styles/style.min.css?v2" type="text/css">
+<link rel="stylesheet" href="./styles/rSlider.min.css?v3">
+<link href="./styles/sweetalert.borderless.theme.min.css?v3" rel="stylesheet" id="sweetAlert-style">
+<link href="./styles/notification.min.css?v3" rel="stylesheet">
+<link href="./styles/AOS.min.css?v3" rel="stylesheet">
+<link href="./styles/leaflet.css?v3" rel="stylesheet">
+<link rel="stylesheet" href="./styles/style.min.css?v3" type="text/css">
 
 <!-- SCRIPTS -->
+<script src="./scripts/AOS.min.js?v3" defer></script>
+<script src="./scripts/parallax.tilt.min.js?v3" defer></script>
+<script src="./scripts/leaflet.js?v3" defer></script>
+<script src="./scripts/leaflet.init.js?v3" defer></script>
 
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" defer></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js" defer></script>
 
-<script src="./scripts/notification.min.js" defer></script>
-<script src="./scripts/AOS.min.js" defer></script>
-<!-- <script src="./scripts/swiper-bundle.min.js"></script> -->
-<script src="./scripts/parallax.tilt.min.js" defer></script>
-<script src="./scripts/leaflet.js" defer></script>
-<script src="./scripts/leaflet.init.js" defer></script>
-<script src="./scripts/ibg.js" defer></script>
-<script src="./scripts/main.min.js?v2" defer></script>
+<script src="./scripts/sweetalert2.all.min.js?v3" defer id="sweetAlert-script"></script>
+<script src="./scripts/notification.min.js?v3" defer></script>
+
+
+
+<script src="./scripts/rSlider.min.js?v3" defer id="rSlider"></script>
+<script src="./scripts/wNum.min.js?v3" defer id="rSlider"></script>
+<script src="./scripts/main.min.js?v3" defer></script>
 
 </head>
 
@@ -56,6 +60,20 @@
                 <use xlink:href="icons/sprite.svg#Logo_inCOS"></use>
             </svg>
         </div>
+
+        <ul class="header__contacts contacts">
+            <li class="contacts__item">
+                <span class="geolocation" title="Ваше местоположение"></span>
+            </li>
+            <li class="contacts__item">
+                <a href="tel:79786643053" class="link link--phone">
+                    <svg>
+                        <use xlink:href="icons/sprite.svg#phone_icon"></use>
+                    </svg>
+                    +7-978-664-30-53
+                </a>
+            </li>
+        </ul>
     </div>
 </header>
 
@@ -82,8 +100,8 @@
                         </div>
                     </div>
                     <div class="hero-info-body--row hero-info-body__button">
-                        <button class="button button--inline form-callback__button button--anim-pulse" data-tilt
-                            data-tilt-glare data-tilt-max-glare="0.8" data-tilt-axis="x" data-tilt-scale="1.1">
+                        <button class="button button--inline button--anim-pulse quiz-btn" data-tilt data-tilt-glare
+                            data-tilt-max-glare="0.8" data-tilt-axis="x" data-tilt-scale="1.1">
                             Оставить заявку
                         </button>
                     </div>
@@ -95,30 +113,15 @@
 
     <div class="hero__banner">
         <div class="man" data-aos="zoom-in" data-aos-delay="1000">
-            <!-- <picture>
-                <source srcset="image/man.webp" type="image/webp">
-                <img src="image/man.png" alt="" >
-            </picture> -->
         </div>
         <div class="place" data-aos="fade-right" data-aos-delay="1000">
-            <!-- <div class="mirror"></div>
-            <div class="mirror mirror--2"></div> -->
-            <!-- <picture>
-                <source srcset="image/banner_img.webp" type="image/webp">
-                <img src="image/banner_img.png" alt="">
-            </picture> -->
         </div>
     </div>
-
-    <script>
-
-
-    </script>
 </section>
 
         <section class="section about-product">
     <div class="container about-product__container">
-        <h2 class="about-product__title" data-aos="fade-right">Качество нашей мебели</h2>
+        <h2 class="about-product__title" data-aos="fade-down">Качество нашей мебели</h2>
         <div class="about-product__content about-product-content">
             <ul class="about-product-content__list">
 
@@ -127,10 +130,10 @@
                         <span>Супер-прочные каркасы</span>
                     </h4>
                     <div class="about-item__content">
-                        <p>
+                        <p data-aos="fade-down" data-aos-delay="0">
                             Все каркасы выполнены из древесины хвойных пород и фанеры повышенной прочности
                         </p>
-                        <p>
+                        <p data-aos="fade-down" data-aos-delay="250">
                             Скрипы - исключены! Высокая прочность и долговечность соединений обеспечиваются двойным
                             сцеплением (креплением) - на клей и скобу
                         </p>
@@ -143,14 +146,14 @@
                         <span>Усиленная конструкция механизмов</span>
                     </h4>
                     <div class="about-item__content">
-                        <p>
+                        <p data-aos="fade-down" data-aos-delay="0">
                             Выдерживают нагрузку до 120 кг
                         </p>
-                        <p>
+                        <p data-aos="fade-down" data-aos-delay="250">
                             Подходят
                             для ежедневного использования
                         </p>
-                        <p>
+                        <p data-aos="fade-down" data-aos-delay="500">
                             <b>Тест на эксплуатацию на 10 лет</b>
                         </p>
                     </div>
@@ -162,15 +165,21 @@
                         <span>Наполнение премиум класса</span>
                     </h4>
                     <div class="about-item__content">
-                        <p>Независимый пружинный блок
+                        <p data-aos="fade-down" data-aos-delay="0">
+                            Независимый пружинный блок
                         </p>
-                        <p>Пены премиум качества из Европы
+                        <p data-aos="fade-down" data-aos-delay="250">
+                            Пены премиум качества из Европы
                         </p>
-                        <p><b>Повышенный уровень комфорта</b>
+                        <p data-aos="fade-down" data-aos-delay="500">
+                            <b>Повышенный уровень комфорта</b>
                         </p>
-                        <p>Гипоаллергенные пены
+                        <p data-aos="fade-down" data-aos-delay="750">
+                            Гипоаллергенные пены
                         </p>
-                        <p>Испытания по сертификатам DGM (сертификат немецкого качества на надежность и износостойкость)
+                        <p data-aos="fade-down" data-aos-delay="1000">
+                            Испытания по сертификатам DGM (сертификат немецкого качества на надежность и
+                            износостойкость)
                         </p>
                     </div>
 
@@ -181,11 +190,14 @@
                         <span>Более 2000 видов тканей</span>
                     </h4>
                     <div class="about-item__content">
-                        <p><b>Износостойкость более 50 000 циклов по тесту Мартиндейла</b>
+                        <p data-aos="fade-down" data-aos-delay="0">
+                            <b>Износостойкость более 50 000 циклов по тесту Мартиндейла</b>
                         </p>
-                        <p>Работаем с натуральной кожей
+                        <p data-aos="fade-down" data-aos-delay="250">
+                            Работаем с натуральной кожей
                         </p>
-                        <p>Помогаем определиться с выбором, в зависимости от места и условий эксплуатации
+                        <p data-aos="fade-down" data-aos-delay="500">
+                            Помогаем определиться с выбором, в зависимости от места и условий эксплуатации
                         </p>
 
                     </div>
@@ -200,13 +212,138 @@
         <section class="section pret-a-porte">
     <div class="container pret-a-porte__container">
 
-        <h2 class="pret-a-porte__title">мы Прет-а-порте в мягкой мебели</h2>
+        <h2 class="pret-a-porte__title" data-aos="fade-down">мы Прет-а-порте в мягкой мебели</h2>
 
-        <div class="pret-a-porte__content product-list-body">
+        <div class="pret-a-porte__content product-list-body" id="product-list">
 
             <ul class="product-list-body__list">
 
-                <li class="product-list-body__item product" data-aos="zoom-in" data-aos-delay="250">
+                <script>
+                    const PRODUCTS = [
+                        {
+                            id: 1,
+                            thumb: 'image/product/el_briente.jpg',
+                            image: 'image/product/el_briente_full.jpg',
+                            price: 71000,
+                            name: 'Эль Бриенте',
+                            categoryName: 'Прямой диван',
+                            description: 'без спального места',
+                            whs: '180х107х106 см'
+                        },
+                        {
+                            id: 2,
+                            thumb: 'image/product/altere.jpg',
+                            image: 'image/product/altere_full.jpg',
+                            price: 81000,
+                            name: 'Альтре',
+                            categoryName: 'Прямой диван',
+                            description: 'без спального места',
+                            whs: '244х100х95 см'
+                        },
+                        {
+                            id: 3,
+                            thumb: 'image/product/kente.jpg',
+                            image: 'image/product/kente_full.jpg',
+                            price: 182000,
+                            name: 'Кёнте',
+                            categoryName: 'Угловой диван',
+                            description: 'спальное место: 200х150 см',
+                            whs: '372х183х80 см'
+                        },
+                        {
+                            id: 4,
+                            thumb: 'image/product/kaiteke.jpg',
+                            image: 'image/product/kaiteke_full.jpg',
+                            price: 105000,
+                            name: 'Кайтеки',
+                            categoryName: 'Прямой диван',
+                            description: 'спальное место: 210х150 см',
+                            whs: '250х104х95 см'
+                        },
+                        {
+                            id: 5,
+                            thumb: 'image/product/kente_line.jpg',
+                            image: 'image/product/kente_line_full.jpg',
+                            price: 131000,
+                            name: 'Кёнте',
+                            categoryName: 'Прямой диван',
+                            description: 'спальное место: 200х150 см',
+                            whs: '272х122х80 см'
+                        },
+                        {
+                            id: 6,
+                            thumb: 'image/product/lamitie_line.jpg',
+                            image: 'image/product/lamitie_line_full.jpg',
+                            price: 114000,
+                            name: "Л'Амитье",
+                            categoryName: 'Кровать',
+                            description: 'спальное место: 210х150 см',
+                            whs: '265х105х103 см'
+                        },
+                        {
+                            id: 7,
+                            thumb: 'image/product/alexia.jpg',
+                            image: 'image/product/alexia_full.jpg',
+                            price: 78000,
+                            name: "Алексия",
+                            categoryName: 'Кровать',
+                            description: 'Спальное место: 140х200 см с коробом для хранения',
+                            whs: ''
+                        },
+                        {
+                            id: 8,
+                            thumb: 'image/product/demi.jpg',
+                            image: 'image/product/demi_full.jpg',
+                            price: 68000,
+                            name: "Деми",
+                            categoryName: 'Кровать',
+                            description: 'Спальное место: 140х200 см с коробом для хранения',
+                            whs: ''
+                        },
+                        {
+                            id: 9,
+                            thumb: 'image/product/lamitie_kreslo.jpg',
+                            image: 'image/product/lamitie_kreslo_full.jpg',
+                            price: 56000,
+                            name: "Л'Амитье",
+                            categoryName: 'Кресло',
+                            description: '',
+                            whs: '124х105х99 см'
+                        },
+                        {
+                            id: 10,
+                            thumb: 'image/product/uno_noveda.jpg',
+                            image: 'image/product/uno_noveda_full.jpg',
+                            price: 49000,
+                            name: "Уна Новеда",
+                            categoryName: 'Кресло',
+                            description: '',
+                            whs: '106х90х71 см'
+                        },
+                        {
+                            id: 11,
+                            thumb: 'image/product/el_riko.jpg',
+                            image: 'image/product/el_riko_full.jpg',
+                            price: 61000,
+                            name: "Эль Рикко",
+                            categoryName: 'Кресло',
+                            description: '',
+                            whs: '115х94х73 см'
+                        },
+                        {
+                            id: 12,
+                            thumb: 'image/product/kaiteke_kreslo.jpg',
+                            image: 'image/product/kaiteke_kreslo_full.jpg',
+                            price: 50000,
+                            name: "Кайтеки",
+                            categoryName: 'Кресло',
+                            description: '',
+                            whs: '110х104х95 см'
+                        },
+                    ]
+                </script>
+
+                <li class="product-list-body__item product" data-product-id="1" data-aos="zoom-in" data-aos-delay="0">
                     <div class="product__image" data-tilt>
                         <div class="product__price">от<span>71 000</span></div>
                         <picture><source srcset="image/product/el_briente.webp" type="image/webp"><img src="image/product/el_briente.jpg" alt="Прямой диван Эль Бриенте"></picture>
@@ -220,7 +357,7 @@
                     </div>
                 </li>
 
-                <li class="product-list-body__item product" data-aos="zoom-in" data-aos-delay="250">
+                <li class="product-list-body__item product" data-product-id="2" data-aos="zoom-in" data-aos-delay="250">
                     <div class="product__image" data-tilt>
                         <div class="product__price">от<span>81 000</span></div>
                         <picture><source srcset="image/product/altere.webp" type="image/webp"><img src="image/product/altere.jpg" alt="Прямой диван Альтре"></picture>
@@ -234,7 +371,7 @@
                     </div>
                 </li>
 
-                <li class="product-list-body__item product" data-aos="zoom-in" data-aos-delay="250">
+                <li class="product-list-body__item product" data-product-id="3" data-aos="zoom-in" data-aos-delay="500">
                     <div class="product__image" data-tilt>
                         <div class="product__price">от<span>182 000</span></div>
                         <picture><source srcset="image/product/kente.webp" type="image/webp"><img src="image/product/kente.jpg" alt="Угловой диван Кёнте"></picture>
@@ -248,7 +385,7 @@
                     </div>
                 </li>
 
-                <li class="product-list-body__item product" data-aos="zoom-in" data-aos-delay="250">
+                <li class="product-list-body__item product" data-product-id="4" data-aos="zoom-in" data-aos-delay="750">
                     <div class="product__image" data-tilt>
                         <div class="product__price">от<span>105 000</span></div>
                         <picture><source srcset="image/product/kaiteke.webp" type="image/webp"><img src="image/product/kaiteke.jpg" alt="Прямой диван Кайтеки"></picture>
@@ -264,8 +401,7 @@
 
 
 
-
-                <li class="product-list-body__item product" data-aos="zoom-in" data-aos-delay="250">
+                <li class="product-list-body__item product" data-product-id="5" data-aos="zoom-in" data-aos-delay="0">
                     <div class="product__image" data-tilt>
                         <div class="product__price">от<span>131 000</span></div>
                         <picture><source srcset="image/product/kente_line.webp" type="image/webp"><img src="image/product/kente_line.jpg" alt="Прямой диван Кёнте"></picture>
@@ -279,7 +415,7 @@
                     </div>
                 </li>
 
-                <li class="product-list-body__item product" data-aos="zoom-in" data-aos-delay="250">
+                <li class="product-list-body__item product" data-product-id="6" data-aos="zoom-in" data-aos-delay="250">
                     <div class="product__image" data-tilt>
                         <div class="product__price">от<span>114 000</span></div>
                         <picture><source srcset="image/product/lamitie_line.webp" type="image/webp"><img src="image/product/lamitie_line.jpg" alt="Прямой диван Л'Амитье"></picture>
@@ -293,7 +429,7 @@
                     </div>
                 </li>
 
-                <li class="product-list-body__item product" data-aos="zoom-in" data-aos-delay="250">
+                <li class="product-list-body__item product" data-product-id="7" data-aos="zoom-in" data-aos-delay="500">
                     <div class="product__image" data-tilt>
                         <div class="product__price">от<span>78 000</span></div>
                         <picture><source srcset="image/product/alexia.webp" type="image/webp"><img src="image/product/alexia.jpg" alt="Кровать Алексия"></picture>
@@ -307,7 +443,7 @@
                     </div>
                 </li>
 
-                <li class="product-list-body__item product" data-aos="zoom-in" data-aos-delay="250">
+                <li class="product-list-body__item product" data-product-id="8" data-aos="zoom-in" data-aos-delay="750">
                     <div class="product__image" data-tilt>
                         <div class="product__price">от<span>68 000</span></div>
                         <picture><source srcset="image/product/demi.webp" type="image/webp"><img src="image/product/demi.jpg" alt="Кровать Деми"></picture>
@@ -323,8 +459,7 @@
 
 
 
-
-                <li class="product-list-body__item product" data-aos="zoom-in" data-aos-delay="250">
+                <li class="product-list-body__item product" data-product-id="9" data-aos="zoom-in" data-aos-delay="0">
                     <div class="product__image" data-tilt>
                         <div class="product__price">от<span>56 000</span></div>
                         <picture><source srcset="image/product/lamitie_kreslo.webp" type="image/webp"><img src="image/product/lamitie_kreslo.jpg" alt="Кресло Л'Амитье"></picture>
@@ -337,7 +472,8 @@
                     </div>
                 </li>
 
-                <li class="product-list-body__item product" data-aos="zoom-in" data-aos-delay="250">
+                <li class="product-list-body__item product" data-product-id="10" data-aos="zoom-in"
+                    data-aos-delay="250">
                     <div class="product__image" data-tilt>
                         <div class="product__price">от<span>49 000</span></div>
                         <picture><source srcset="image/product/uno_noveda.webp" type="image/webp"><img src="image/product/uno_noveda.jpg" alt="Кресло Уна Новеда"></picture>
@@ -350,7 +486,8 @@
                     </div>
                 </li>
 
-                <li class="product-list-body__item product" data-aos="zoom-in" data-aos-delay="250">
+                <li class="product-list-body__item product" data-product-id="11" data-aos="zoom-in"
+                    data-aos-delay="500">
                     <div class="product__image" data-tilt>
                         <div class="product__price">от<span>61 000</span></div>
                         <picture><source srcset="image/product/el_riko.webp" type="image/webp"><img src="image/product/el_riko.jpg" alt="кресло Эль Рикко"></picture>
@@ -363,7 +500,8 @@
                     </div>
                 </li>
 
-                <li class="product-list-body__item product" data-aos="zoom-in" data-aos-delay="250">
+                <li class="product-list-body__item product" data-product-id="12" data-aos="zoom-in"
+                    data-aos-delay="750">
                     <div class="product__image" data-tilt>
                         <div class="product__price">от<span>50 000</span></div>
                         <picture><source srcset="image/product/kaiteke_kreslo.webp" type="image/webp"><img src="image/product/kaiteke_kreslo.jpg" alt="Кресло Кайтеки"></picture>
@@ -383,7 +521,7 @@
 
         </div>
 
-        <div class="pret-a-porte__footer">
+        <div class="pret-a-porte__footer" data-aos="fade-up">
             <p>
                 БОЛЕЕ 2000 РЕАЛИЗОВАННЫХ ПРОЕКТОВ
                 <br>КАЖДЫЙ ГОД МЫ ПОПОЛНЯЕМ НАШ АССОРТИМЕНТНЫЙ РЯД НОВЫМИ МОДЕЛЯМИ,
@@ -398,28 +536,30 @@
 
     <div class="quiz-section__container">
 
-        <h2 class="quiz-section__title" data-aos="zoom-in">Получите полную адаптацию мягкой мебели премиум класса под
-            ваш
-            интерьер</h2>
+        <h2 class="quiz-section__title" data-aos="fade-right">Получите полную адаптацию мягкой мебели премиум класса под
+            ваш интерьер</h2>
 
         <div class="quiz-section__description">
-            <p>Закажите индивидуальную конфигурацию на основе 30 моделей</p>
-            <p>Выберите цвет и текстуру</p>
-            <p>Создавайте атмосферу уюта по своим правилам</p>
+            <p data-aos="fade-right" data-aos-delay="250">Закажите индивидуальную конфигурацию на основе 30 моделей</p>
+            <p data-aos="fade-right" data-aos-delay="500">Выберите цвет и текстуру</p>
+            <p data-aos="fade-right" data-aos-delay="750">Создавайте атмосферу уюта по своим правилам</p>
         </div>
 
         <div class="quiz-section__content">
-            <p>Рассчитайте стоимость мягкой мебели по вашим параметрам и получите:</p>
+            <p data-aos="fade-left" data-aos-delay="250">Рассчитайте стоимость мягкой мебели по вашим параметрам и
+                получите:</p>
             <ul class="quiz-section__params quiz-params">
-                <li class="quiz-params__item">гарантированную скидку 7%</li>
-                <li class="quiz-params__item">бесплатную доставку по Крыму*</li>
-                <li class="quiz-params__item">гайд “Как не ошибиться с выбором обивочной ткани”</li>
+                <li class="quiz-params__item" data-aos="fade-left" data-aos-delay="500">гарантированную скидку 7%</li>
+                <li class="quiz-params__item" data-aos="fade-left" data-aos-delay="750">бесплатную доставку по Крыму*
+                </li>
+                <li class="quiz-params__item" data-aos="fade-left" data-aos-delay="1000">гайд “Как не ошибиться с
+                    выбором обивочной ткани”</li>
             </ul>
 
-            <button
-                class="button button--inline button--anim-pulse button--blue quiz-section__button">Рассчитать</button>
+            <button class="button button--inline button--anim-pulse button--blue quiz-section__button"
+                data-aos="fade-down">Рассчитать</button>
 
-            <svg class="logo logo--bebebe">
+            <svg class="logo logo--bebebe" data-aos="zoom-in">
                 <use xlink:href="icons/sprite.svg#Logo_inCOS"></use>
             </svg>
 
@@ -432,44 +572,44 @@
 
     <div class="container guarantee__container">
 
-        <h2 class="guarantee__title" data-aos="fade-left">
+        <h2 class="guarantee__title" data-aos="fade-down">
             Один из лучших<br> производителей Юга России
         </h2>
 
         <ul class="guarantee__list">
-            <li class="guarantee__item">
+            <li class="guarantee__item" data-aos="fade-down" data-aos-delay="0">
                 Собственное <br>Конструкторское Бюро
             </li>
 
-            <li class="guarantee__item">
+            <li class="guarantee__item" data-aos="fade-down" data-aos-delay="250">
                 Более 30 моделей мебели
             </li>
 
-            <li class="guarantee__item">
+            <li class="guarantee__item" data-aos="fade-down" data-aos-delay="500">
                 Полный цикл производства <br>мягкой мебели
             </li>
 
-            <li class="guarantee__item">
+            <li class="guarantee__item" data-aos="fade-down" data-aos-delay="7500">
                 5 лет специализации <br>на нестандартных <br>изделиях
             </li>
 
-            <li class="guarantee__item">
+            <li class="guarantee__item" data-aos="fade-down" data-aos-delay="1000">
                 Ежегодно посещаем <br>мебельные выставки<br>
                 в Европе, чтобы быть в тренде
 
             </li>
 
-            <li class="guarantee__item">
+            <li class="guarantee__item" data-aos="fade-down" data-aos-delay="1250">
                 Более 7 лет<br>
                 успешно конкурируем<br>
                 с зарубежными брендами
             </li>
 
-            <li class="guarantee__item">
+            <li class="guarantee__item" data-aos="fade-down" data-aos-delay="1500">
                 Работаем только с проверенными <br>производителями и поставщиками <br>комплектующих
             </li>
 
-            <li class="guarantee__item">
+            <li class="guarantee__item" data-aos="fade-down" data-aos-delay="1750">
                 Проведены все необходимые испытания <br>по качеству продукции - сертификат <br>соответствия качества
                 мебели
             </li>
@@ -478,7 +618,7 @@
     </div>
 
 
-    <h2 class="pret-a-porte-old__title">
+    <h2 class="pret-a-porte-old__title" data-aos="fade-left">
         7 причин работать с нами
     </h2>
 
@@ -570,22 +710,22 @@
         </picture>
     </div>
     <div class="create-product__body">
-        <h2 class="create-product__title">Гарантия</h2>
+        <h2 class="create-product__title" data-aos="fade-down">Гарантия</h2>
         <div class="guarantee">
             <ul class="guarantee__list">
 
-                <li class="guarantee__item">
+                <li class="guarantee__item" data-aos="fade-left" data-aos-delay="0">
                     2 года на внутреннее наполнение и чехол
                 </li>
 
-                <li class="guarantee__item">
+                <li class="guarantee__item" data-aos="fade-left" data-aos-delay="250">
                     5 лет на элементы каркаса
                 </li>
 
             </ul>
         </div>
 
-        <p>
+        <p data-aos="fade-left" data-aos-delay="500">
             Мы уверены в качестве наших товаров!
             <br>Мы даем гарантию производителя на весь ассортимент.
             <br>
@@ -601,26 +741,28 @@
         </p>
     </div>
 
-    <span class="create-product__footnote">
+    <span class="create-product__footnote" data-aos="fade-up" data-aos-delay="750">
         Наша мебель соответствуют требованиям безопасности<br>
         и нормативно-техническим документам ГОСТ 16371-2014.
     </span>
 </section>
 
         <section class="section delivery">
-    <h2 class="delivery__title">Доставка</h2>
+    <h2 class="delivery__title" data-aos="fade-down" data-aos-delay="0">Доставка</h2>
 
-    <div class="delivery__banner"></div>
+    <div class="delivery__banner" data-aos="zoom-in" data-aos-delay="0"></div>
 
     <div class="delivery__content">
 
-        <p>Бесплатная доставка до адреса и бесплатная сборка мебели по Крыму. </p>
+        <p data-aos="fade-left" data-aos-delay="0">Бесплатная доставка до адреса и бесплатная сборка мебели по Крыму.
+        </p>
 
-        <p>Наша продукция представлена в 16 регионах России</p>
+        <p data-aos="fade-left" data-aos-delay="250">Наша продукция представлена в 16 регионах России</p>
 
-        <p>Индивидуальные условия. Расчет стоимости произведут наши менеджеры после оценки габаритов заказа.</p>
+        <p data-aos="fade-left" data-aos-delay="500">Индивидуальные условия. Расчет стоимости произведут наши менеджеры
+            после оценки габаритов заказа.</p>
 
-        <div class="footnote">
+        <div class="footnote" data-aos="fade-left" data-aos-delay="750">
             <p>
                 В случае если
                 нашего представителя нет в Вашем городе,
@@ -635,7 +777,7 @@
         </div>
     </div>
 
-    <div class="delivery__advanced">
+    <div class="delivery__advanced" data-aos="fade-up" data-aos-delay="1000">
 
         <svg viewBox="0 0 1041 778" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -1059,6 +1201,465 @@
 
 
 
+        <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        const $products = document.querySelectorAll('#product-list [data-product-id]');
+        [...$products].forEach(product => {
+            product.addEventListener('click', e => {
+                e.preventDefault();
+                e.stopPropagation();
+
+                if (e.target.closest('.product__image') || e.target.closest('.product__name')) {
+                    const productId = product.dataset.productId;
+                    const productInfo = PRODUCTS.filter(pr => pr.id == productId).pop();
+                    if (!productInfo) return;
+                    const { id, name, image, thumb, categoryName, price, description, whs } = productInfo;
+                    const productImage = image ? image : thumb
+
+                    const template = `
+                    <article class="product-popup">
+                        <div class="product-popup__container">
+                            <div class="product-popup__image">
+                                <picture><source srcset="${productImage}" type="image/webp"><img src="${productImage}" alt="${categoryName} ${name}"></picture>
+                            </div>
+                            <div class="product-popup__content">
+                                <div class="product-popup__info">
+                                    <h1 class="product-popup__name">
+                                        ${name}
+                                        <span>${categoryName}</span>
+                                    </h1>
+                                    <div class="product-popup__description">
+                                        <div class="product-popup__whs">
+                                            Размеры
+                                            <span>${whs}</span>
+                                        </div>
+                                        <p>${description}</p>
+                                    </div>
+                                </div>
+                                <div class="product-popup__price">
+                                    от ${new Intl.NumberFormat('ru-RU').format(price)}р
+                                </div>
+                            </div>
+                        </div>
+                    </article>`;
+
+                    Swal.fire({
+                        html: template,
+                        background: 'transparent',
+                        showConfirmButton: false,
+                        showCloseButton: true
+                    })
+
+                }
+            })
+        })
+    }, { passive: true })
+</script>
+<script>
+    function toggleEmailRequire(el) {
+        const $email = document.querySelector('.quiz-form input[name=email]')
+        $email.required = el.checked
+        if (el.checked) {
+            $email.placeholder = '* ' + $email.placeholder
+        } else {
+            $email.placeholder = $email.placeholder.replace('* ', '')
+        }
+
+    }
+
+    function minChange({ value: min }) {
+        const max = document.querySelector('#range_max').value || slider.dataset.max
+        slider.noUiSlider.set([min, max])
+    }
+    function maxChange({ value: max }) {
+        const min = document.querySelector('#range_min').value || slider.dataset.min
+        slider.noUiSlider.set([min, max])
+    }
+
+    class Quiz {
+
+        constructor(trigger, {
+            questions = [],
+            fetch = ''
+        }, Swal) {
+            this.trigger = trigger
+            this.deps = false
+
+            if (!trigger) return
+            this.preparing()
+
+            if (questions.length) this.questions = questions;
+            if (!questions.length && fetch) this.getQueue(fetch);
+
+            this.PHONE = '+7-978-664-30-53'
+            this.server = '/mail.php'
+        }
+
+        init() {
+
+            if (this.deps) {
+                if (typeof this.trigger === 'string') {
+                    this.triggerSelector = this.trigger
+                    this.trigger = document.querySelector(this.triggerSelector)
+                }
+                if (typeof this.trigger === 'object') {
+                    this.triggerSelector = '.' + this.trigger.className.split(' ').pop()
+                }
+                this.addOnClickEvents()
+                this.QResults = []
+            } else {
+                console.log('скрипты не загрузились');
+            }
+        }
+
+        renderProgressBar(questionsCount, currentQuestion) {
+            let progressBar = ''
+            for (let i = 0; i < questionsCount; i++) {
+                progressBar += `<li class="progress__item ${this.QResults.length > i && 'active'}"></li>`
+            }
+            return progressBar;
+        }
+
+        renderChoices({ name: q_name, choice: q_choices }) {
+
+            const savedAnswer = this.QResults.filter(_result => _result.name === q_name).pop()
+
+            let choiceTemplate = '<ul class="quiz-popup__choice choice">'
+            q_choices.forEach(({
+                name, type, value, label, image, nextQ
+            }) => {
+                choiceTemplate += `
+                <li class="choice__item">
+                    <label class="choice__input">
+                        <input type="${type}" name="${name}" value="${value}" ${savedAnswer && savedAnswer.value === value && 'checked'} data-next-q="${nextQ}">
+
+                        ${image && `
+                            <div class="choice__image">
+                                <picture><source srcset="${image.src}" type="image/webp"><img src="${image.src}" alt="${image.alt}"></picture>
+                            </div>
+                            `}
+                        
+                        <div class="choice__button">
+                            <span>${label}</span>
+                        </div>
+                    </label>
+                </li>
+                `
+            })
+            choiceTemplate += '</ul>'
+            return choiceTemplate;
+        }
+
+        renderRange({ name: q_name, range }) {
+            return `
+            <ul class="quiz-popup__range range">
+                <div class="range__container range__slider">
+                    <div id="slider" data-min="${range.min}" data-max="${range.max}"></div>
+                </div>
+                <div class="range__inputs">
+                    <input type="number" name="range" id="range_min" placeholder="от" step="1000" min="0"
+                        onchange="minChange(this)">
+                    <input type="number" name="range" id="range_max" placeholder="до" step="1000" min="0"
+                        onchange="maxChange(this)">
+                </div>
+            </ul>
+            `
+        }
+
+        depsScriptInit() {
+            noUiSlider.create(slider, {
+                start: [Number(slider.dataset.min), Number(slider.dataset.max)],
+                connect: true,
+                range: {
+                    'min': Number(slider.dataset.min),
+                    'max': Number(slider.dataset.max)
+                },
+                step: 1000,
+                tooltips: true,
+                format: wNumb({
+                    decimals: 0,
+                    thousand: ' ',
+                    suffix: ' &#8381;'
+                })
+            });
+            slider.noUiSlider.on('change.one', function (values) {
+                document.querySelector('#range_min').value = Number(values[0].replace('&#8381;', '').replace(' ', ''))
+                document.querySelector('#range_max').value = Number(values[1].replace('&#8381;', '').replace(' ', ''))
+            });
+        }
+
+        renderQuizForm() {
+            return `
+                <form class="quiz-popup__form quiz-form">
+                    <fieldset class="quiz-form__text">
+                        <p>
+                            В течение часа наш менеджер<br>
+                            свяжется с Вами для уточнения деталей<br>
+                            и вышлет полный расчет стоимости<br>
+                            в нескольких вариантах.<br>
+                            Укажите ваш номер телефона.<br>
+                            За ним будет закреплена скидка 7%<br>
+                            на заказ и Вы сразу можете скачать наш гайд<br>
+                            “Как не ошибиться с выбором обивочной ткани”<br>
+                        </p>
+                        <button class="guide button button--blue button--anim-pulse button--inline" id="guide">Скачать
+                            гайд</button>
+                    </fieldset>
+                    <fieldset class="quiz-form__form">
+                        <div class="quiz-form__row">
+                            <input type="checkbox" name="to[whatsapp]" id="to_whatsapp" value="to_whatsapp">
+                            <label for="to_whatsapp">
+                                <svg>
+                                    <use xlink:href="icons/sprite.svg#to_whatsapp"></use>
+                                </svg>
+                            </label>
+                            <input type="checkbox" name="to[telegram]" id="to_telegram" value="to_telegram">
+                            <label for="to_telegram">
+                                <svg>
+                                    <use xlink:href="icons/sprite.svg#to_telegram"></use>
+                                </svg>
+                            </label>
+                            <input type="checkbox" name="to[email]" id="to_email" value="to_email" onchange="toggleEmailRequire(this)">
+                            <label for="to_email">
+                                <svg>
+                                    <use xlink:href="icons/sprite.svg#to_email"></use>
+                                </svg>
+                            </label>
+                        </div>
+                        <div class="quiz-form__column">
+                            <input type="text" name="firstname" placeholder="* Имя" required>
+                            <input type="phone" name="phone" placeholder="* Телефон"
+                                minlength="11" maxlength="18" required>
+                            <input type="email" name="email" placeholder="e-mail">
+                            <button type="submit" class="quiz-form__submit button button--anim-pulse">
+                                Оставить заявку
+                            </button>
+                        </div>
+                    </fieldset>
+                </form>`;
+        }
+
+        initQuizForm() {
+            const quizForm = document.querySelector('.quiz-form');
+            const inputs = {
+                firstName: {
+                    el: quizForm.querySelector('input[name=firstname]'),
+                    invalidMessage: 'Пожалуйста, укажите Ваше имя',
+                    pattern: ''
+                },
+                phone: {
+                    el: quizForm.querySelector('input[name=phone]'),
+                    invalidMessage: `
+                    Пожалуйста, укажите номер телефона!
+                    Возможно, здесь какая то ошибка!
+                    Напишите номер телефона в числовом формате без пунктуации и пробелов`,
+                    pattern: /[\+]{0,1}[0-9]\s?[\(]{0,1}[0-9]{3}[\)]{0,1}\s?\d{3}[-]{0,1}\s?\d{2}[-]{0,1}\s?\d{2}/
+                },
+                email: {
+                    el: quizForm.querySelector('input[name=email]'),
+                    invalidMessage: `
+                    Пожалуйста, укажите свой e-mail адрес!
+                    Возможно, здесь какая то ошибка!`,
+                    pattern: /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/
+                },
+                to: [...quizForm.querySelectorAll('input[name=to]:checked')]
+            }
+            const { firstName, phone, email, to } = inputs;
+            [firstName, phone, email].map(inp => {
+                inp.el.addEventListener('input', function () {
+                    this.setCustomValidity('');
+                    if (inp.pattern && this.required && !this.value.match(inp.pattern)) {
+                        this.setCustomValidity(inp.invalidMessage)
+                    }
+                    this.checkValidity();
+                })
+                inp.el.addEventListener('invalid', () => {
+                    inp.el.setCustomValidity(inp.invalidMessage)
+                })
+            })
+
+            quizForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const formData = new FormData(quizForm);
+                formData.append('anwers', JSON.stringify(this.QResults))
+                formData.append('post-quiz', true)
+                this.messageToAdmin(formData);
+                document.querySelector('.swal2-close').click()
+            })
+        }
+
+        async messageToAdmin(formData) {
+            const result = await this.postFormData(this.server, formData);
+            if (result.success) {
+                iziToast.success({
+                    title: 'Спасибо!',
+                    overlay: true,
+                    position: 'topRight',
+                    message: result.message
+                });
+            } else {
+                iziToast.error({
+                    title: 'Упс! Ошибочка вышла...',
+                    overlay: true,
+                    position: 'topRight',
+                    message: result.message
+                });
+            }
+
+        }
+
+        async postFormData(url, data) {
+            try {
+                let response = await fetch(url, {
+                    method: 'POST',
+                    body: data
+                });
+                return await response.json();
+            } catch (error) {
+                return { success: false, message: error.message }
+            }
+        }
+
+        async clickHandler(e) {
+            e.stopPropagation()
+
+            let currentQ = 'style', prevQ = '';
+
+            while (currentQ !== 'end') {
+
+                const { name, q, type, choice, range, nextQ = '' } = this.questions.questions.filter(_q => _q.name == currentQ).pop();
+
+                const result = await this.Queue.fire({
+                    html: `
+                        <article class="quiz-popup"> 
+                            <div class="quiz-popup__container">
+                                <ul class="quiz-popup__progress progress">
+                                    ${this.renderProgressBar(this.questions.steps)}
+                                </ul>
+                                <div class="quiz-popup__head">
+                                    <h1 class="quiz-popup__question">${q}</h1>
+                                </div>
+                                
+                                ${type === 'radio' ? this.renderChoices({ name, choice }) : ''}
+                                ${type === 'range' ? this.renderRange({ name, range }) : ''}
+                                ${type === 'form' ? this.renderQuizForm() : ''}
+
+                            </div>
+                        </article>
+                    `,
+                    confirmButtonText: 'Следующий вопрос',
+                    denyButtonText: 'Предыдущий вопрос',
+                    showCloseButton: true,
+                    showConfirmButton: type !== 'form',
+                    showDenyButton: type !== 'form' && this.QResults.length,
+                    focusConfirm: true,
+                    footer: type === 'form' && `
+                        <div class="quiz-popup__footer">
+                            <svg class="logo">
+                                <use xlink:href="icons/sprite.svg#Logo_inCOS"></use>
+                            </svg>
+                            <div class="quiz-popup__contacts">
+                                <a href="tel:${this.PHONE.replace(/\D+/g, "")}" class="quiz-popup__link">
+                                    <svg>
+                                        <use xlink:href="icons/sprite.svg#phone_icon"></use>
+                                    </svg>
+                                    ${this.PHONE}
+                                </a>
+                            </div>
+                        </div>`,
+                    preConfirm: () => {
+                        const radioChecked = document.querySelector(`.quiz-popup__choice input[name="${name}"]:checked`);
+                        const rangeInputs = document.querySelectorAll(`.quiz-popup__range input[name^="${name}"]`);
+
+                        if (type === 'radio' && radioChecked) {
+                            if (!radioChecked) return Swal.showValidationMessage(q)
+
+                            return {
+                                name: radioChecked.name,
+                                value: radioChecked.value,
+                                nextQ: radioChecked.dataset.nextQ,
+                            }
+                        }
+                        if (type === 'range' && rangeInputs) {
+                            const rangeValues = [...rangeInputs].reduce((values, inp) => {
+                                if (inp.id === 'range_max') values['max'] = Number(inp.value)
+                                if (inp.id === 'range_min') values['min'] = Number(inp.value)
+                                return values
+                            }, { min: 0, max: 0 })
+                            if (!Number.isInteger(rangeValues.min) || !Number.isInteger(rangeValues.max)) return Swal.showValidationMessage(q)
+                            if (Number(rangeValues.max) === 0) return Swal.showValidationMessage(q)
+                            return {
+                                name: rangeInputs[0].name,
+                                value: rangeValues,
+                                nextQ: nextQ,
+                            }
+                        }
+
+                    },
+                    didOpen: () => {
+                        if (type === 'range') this.depsScriptInit()
+                        if (type === 'form') this.initQuizForm()
+                    },
+                    backdrop: true,
+                    allowOutsideClick: () => !Swal.isLoading(),
+                })
+
+
+                if (result.value) {
+                    this.QResults.push(result.value)
+                    currentQ = result.value.nextQ;
+                    prevQ = result.value.name
+                } else if (result.dismiss === Swal.DismissReason.deny) {
+                    currentQ = this.QResults.pop().name;
+
+                } else {
+                    this.QResults = []
+                    console.log('result: break', result);
+                    break
+                }
+            }
+
+        }
+
+        preparing() {
+            const EventLoadScript = new Event('quiz-script-loaded', { "bubbles": true, "cancelable": true })
+            document.addEventListener('quiz-script-loaded', this.init.bind(this))
+            this.checkDepsScripts(EventLoadScript)
+        }
+
+        checkDepsScripts(event) {
+            document.querySelector('#sweetAlert-script').onload = () => {
+                this.deps = true;
+                this.Queue = Swal.mixin({
+                    reverseButtons: true,
+                })
+                document.dispatchEvent(event);
+            }
+        }
+
+        addOnClickEvents() {
+            this.trigger.addEventListener('click', this.clickHandler.bind(this))
+        }
+
+        async getQueue(url) {
+            const response = await fetch(url);
+            const result = await response.json()
+            this.questions = result
+        }
+
+    }
+
+
+    const quiz = new Quiz(document.querySelector('.quiz-section__button'), {
+        fetch: 'quiz.json'
+    });
+    const heroQuiz = new Quiz(document.querySelector('.hero .quiz-btn'), {
+        fetch: 'quiz.json'
+    })
+
+</script>
         <footer class="footer">
     <div class="footer__container container">
         <div class="footer__logo">
@@ -1066,6 +1667,20 @@
                 <use xlink:href="icons/sprite.svg#Logo_inCOS"></use>
             </svg>
         </div>
+        <ul class="footer__contacts contacts">
+            <li class="contacts__item">
+
+                <span class="geolocation" title="Ваше местоположение"></span>
+            </li>
+            <li class="contacts__item">
+                <a href="tel:79786643053" class="link link--phone">
+                    <svg>
+                        <use xlink:href="icons/sprite.svg#phone_icon"></use>
+                    </svg>
+                    +7-978-664-30-53
+                </a>
+            </li>
+        </ul>
     </div>
 </footer>
 
@@ -1116,6 +1731,45 @@
             body: data
         });
         return await response.json();
+    }
+
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '04da14a64dmsh1644ace6e1643f4p127aa2jsnb556768c924d',
+            'X-RapidAPI-Host': 'telize-v1.p.rapidapi.com'
+        }
+    };
+</script>
+
+<script>
+    // geolocation
+    const geoLocationElements = document.querySelectorAll('.geolocation');
+
+    if (geoLocationElements.length) {
+
+        async function getIpLocation() {
+            try {
+                const response = await fetch('http://ipwho.is/&output=json&lang=ru')
+                const result = await response.json()
+                appendGeoElements(result)
+            } catch (error) {
+                console.log(error.message);
+            }
+        }
+
+        function appendGeoElements(geoData) {
+            const GeoElHTML = `
+            <svg>
+                <use xlink:href="icons/sprite.svg#GEOlocation"></use>
+            </svg>
+            <span>${geoData.city}</span>
+            `;
+            [...geoLocationElements].forEach(geoEl => geoEl.innerHTML = GeoElHTML)
+        }
+
+        getIpLocation();
+
     }
 </script>
 

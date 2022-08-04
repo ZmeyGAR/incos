@@ -1,0 +1,241 @@
+{
+    "steps": 5,
+    "questions": [
+
+        {
+            "name": "style",
+            "q": "Какой стиль Вы предпочитаете?",
+            "type": "radio",
+            "choice": [
+
+                {
+                    "name": "style",
+                    "type": "radio",
+                    "value": "modern",
+                    "label": "Более современный",
+                    "image": {
+                        "src": "image/quiz/modern_style.png",
+                        "alt": "Современный стиль мебели"
+                    },
+                    "nextQ": "type"
+                },
+
+                {
+                    "name": "style",
+                    "type": "radio",
+                    "value": "classic",
+                    "label": "Более классический",
+                    "image": {
+                        "src": "image/quiz/classic_style.png",
+                        "alt": "Классический стиль мебели"
+                    },
+                    "nextQ": "type"
+                }
+            ]
+        },
+
+        {
+            "name": "type",
+            "q": "Какая мебель вас интересует?",
+            "type": "radio",
+            "choice": [
+
+                {
+                    "name": "type",
+                    "type": "radio",
+                    "value": "Диван",
+                    "label": "Диван",
+                    "image": {
+                        "src": "image/quiz/диван.png",
+                        "alt": "Диван"
+                    },
+                    "nextQ": "form_divan"
+                },
+                {
+                    "name": "type",
+                    "type": "radio",
+                    "value": "Кровать",
+                    "label": "Кровать",
+                    "image": {
+                        "src": "image/quiz/кровать.png",
+                        "alt": "Кровать"
+                    },
+                    "nextQ": "casebox"
+                },
+                {
+                    "name": "type",
+                    "type": "radio",
+                    "value": "Кресло",
+                    "label": "Кресло",
+                    "image": {
+                        "src": "image/quiz/кресло.png",
+                        "alt": "Кресло"
+                    },
+                    "nextQ": "bunk"
+                },
+                {
+                    "name": "type",
+                    "type": "radio",
+                    "value": "Пуф/банкетка",
+                    "label": "Пуф/банкетка",
+                    "image": {
+                        "src": "image/quiz/пуф.png",
+                        "alt": "Пуф/банкетка"
+                    },
+                    "nextQ": "casebox"
+                }
+            ]
+        },
+
+
+        {
+            "name": "form_divan",
+            "q": "Какая форма дивана требуется?",
+            "type": "radio",
+            "choice": [
+
+                {
+                    "name": "form_divan",
+                    "type": "radio",
+                    "value": "Прямой",
+                    "label": "Прямой",
+                    "image": {
+                        "src": "image/quiz/прямой_диван.png",
+                        "alt": "Прямой диван"
+                    },
+                    "nextQ": "bunk"
+                },
+                {
+                    "name": "form_divan",
+                    "type": "radio",
+                    "value": "Угловой",
+                    "label": "Угловой",
+                    "image": {
+                        "src": "image/quiz/угловой_диван.png",
+                        "alt": "Угловой диван"
+                    },
+                    "nextQ": "bunk"
+                },
+                {
+                    "name": "form_divan",
+                    "type": "radio",
+                    "value": "dontKnow",
+                    "label": "Затрудняюсь с выбором",
+                    "image": {
+                        "src": "image/quiz/dontKnow.png",
+                        "alt": "Затрудняюсь с выбором"
+                    },
+                    "nextQ": "bunk"
+                },
+                {
+                    "name": "form_divan",
+                    "type": "radio",
+                    "value": "customForm",
+                    "label": "Сложной формы",
+                    "image": {
+                        "src": "image/quiz/custom_form_divan.png",
+                        "alt": "Диван сложной формы"
+                    },
+                    "nextQ": "bunk"
+                }
+            ]
+        },
+
+        {
+            "name": "bunk",
+            "q": "Наличие спального места?",
+            "type": "radio",
+            "choice": [
+
+                {
+                    "name": "bunk",
+                    "type": "radio",
+                    "value": "да",
+                    "label": "да",
+                    "image": {
+                        "src": "image/quiz/bunk_yes.png",
+                        "alt": "Прямой диван"
+                    },
+                    "nextQ": "range"
+                },
+                {
+                    "name": "bunk",
+                    "type": "radio",
+                    "value": "нет",
+                    "label": "нет",
+                    "image": {
+                        "src": "image/quiz/bunk_no.png",
+                        "alt": "Угловой диван"
+                    },
+                    "nextQ": "range"
+                },
+                {
+                    "name": "bunk",
+                    "type": "radio",
+                    "value": "dontKnow",
+                    "label": "Затрудняюсь с выбором",
+                    "image": {
+                        "src": "image/quiz/dontKnow.png",
+                        "alt": "Затрудняюсь с выбором"
+                    },
+                    "nextQ": "range"
+                }
+            ]
+        },
+
+        {
+            "name": "casebox",
+            "q": "Нужен короб для хранения?",
+            "type": "radio",
+            "choice": [
+
+                {
+                    "name": "casebox",
+                    "type": "radio",
+                    "value": "да",
+                    "label": "да",
+                    "image": "",
+                    "nextQ": "range"
+                },
+                {
+                    "name": "casebox",
+                    "type": "radio",
+                    "value": "нет",
+                    "label": "нет",
+                    "image": "",
+                    "nextQ": "range"
+                },
+                {
+                    "name": "casebox",
+                    "type": "radio",
+                    "value": "dontKnow",
+                    "label": "Затрудняюсь с выбором",
+                    "image": "",
+                    "nextQ": "range"
+                }
+            ]
+        },
+
+        {
+            "name": "range",
+            "q": "В какой бюджет планируете уложиться?",
+            "type": "range",
+            "range": {
+                "min": 0,
+                "max": 300000
+            },
+            "nextQ": "finish"
+        },
+
+        {
+            "name": "finish",
+            "q": "расчет почти готов<sub>куда удобнее его прислать?</sub>",
+            "type": "form",
+            "nextQ": "end"
+        }
+
+
+
+    ]
+
+}
