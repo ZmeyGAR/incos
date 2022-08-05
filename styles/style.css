@@ -2073,7 +2073,8 @@ body {
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap;
       min-width: 190px;
-      border-color: #767BA3; }
+      border-color: #767BA3;
+      cursor: pointer; }
       .quiz-form__text .guide:before {
         content: '';
         display: inline;
