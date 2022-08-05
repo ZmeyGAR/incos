@@ -30,11 +30,11 @@
 <!-- SCRIPTS -->
 <script src="./scripts/AOS.min.js" defer></script>
 <script src="./scripts/parallax.tilt.min.js" defer></script>
-<script src="./scripts/leaflet.js" defer></script>
-<script src="./scripts/leaflet.init.js" defer></script>
+<!-- <script src="./scripts/leaflet.js" defer></script> -->
+<!-- <script src="./scripts/leaflet.init.js" defer></script> -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js" defer></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js" defer></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js" defer></script> -->
 
 <script src="./scripts/sweetalert2.all.min.js" defer id="sweetAlert-script"></script>
 <script src="./scripts/notification.min.js?v5" defer></script>
@@ -45,6 +45,26 @@
 <script src="./scripts/wNum.min.js" defer id="rSlider"></script>
 
 <script src="./scripts/main.min.js?v5" defer></script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+//     (function (m, e, t, r, i, k, a) {
+//         m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+//         m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+//     })
+//         (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+//     ym(89535487, "init", {
+//         clickmap: true,
+//         trackLinks: true,
+//         accurateTrackBounce: true,
+//         webvisor: true
+//     });
+// </script>
+<noscript>
+    <!-- <div><picture><source srcset="https://mc.yandex.ru/watch/89535487" type="image/webp"><img src="https://mc.yandex.ru/watch/89535487" style="position:absolute; left:-9999px;" alt="" /></picture></div> -->
+</noscript>
+<!-- /Yandex.Metrika counter -->
 
 </head>
 
@@ -114,14 +134,26 @@
 
             </div>
         </div>
+        <div class="hero__banner">
+
+            <div class="man" data-aos="zoom-in" data-aos-delay="1000">
+            </div>
+            <div class="place" data-aos="fade-right" data-aos-delay="1000">
+            </div>
+
+            <picture><source srcset="image/hero_banner.webp" type="image/webp"><img src="image/hero_banner.png" alt="Баннер"></picture>
+        </div>
     </div>
 
-    <div class="hero__banner">
+    <!-- <div class="hero__banner">
+
         <div class="man" data-aos="zoom-in" data-aos-delay="1000">
         </div>
         <div class="place" data-aos="fade-right" data-aos-delay="1000">
         </div>
-    </div>
+
+        <picture><source srcset="image/hero_banner.webp" type="image/webp"><img src="image/hero_banner.png" alt="Баннер"></picture>
+    </div> -->
 </section>
 
         <section class="section about-product">
@@ -586,35 +618,35 @@
                 Собственное <br>Конструкторское Бюро
             </li>
 
-            <li class="guarantee__item" data-aos="fade-down" data-aos-delay="250">
+            <li class="guarantee__item" data-aos="fade-down" data-aos-delay="150">
                 Более 30 моделей мебели
             </li>
 
-            <li class="guarantee__item" data-aos="fade-down" data-aos-delay="500">
+            <li class="guarantee__item" data-aos="fade-down" data-aos-delay="300">
                 Полный цикл производства <br>мягкой мебели
             </li>
 
-            <li class="guarantee__item" data-aos="fade-down" data-aos-delay="7500">
+            <li class="guarantee__item" data-aos="fade-down" data-aos-delay="450">
                 5 лет специализации <br>на нестандартных <br>изделиях
             </li>
 
-            <li class="guarantee__item" data-aos="fade-down" data-aos-delay="1000">
+            <li class="guarantee__item" data-aos="fade-down" data-aos-delay="600">
                 Ежегодно посещаем <br>мебельные выставки<br>
                 в Европе, чтобы быть в тренде
 
             </li>
 
-            <li class="guarantee__item" data-aos="fade-down" data-aos-delay="1250">
+            <li class="guarantee__item" data-aos="fade-down" data-aos-delay="750">
                 Более 7 лет<br>
                 успешно конкурируем<br>
                 с зарубежными брендами
             </li>
 
-            <li class="guarantee__item" data-aos="fade-down" data-aos-delay="1500">
+            <li class="guarantee__item" data-aos="fade-down" data-aos-delay="900">
                 Работаем только с проверенными <br>производителями и поставщиками <br>комплектующих
             </li>
 
-            <li class="guarantee__item" data-aos="fade-down" data-aos-delay="1750">
+            <li class="guarantee__item" data-aos="fade-down" data-aos-delay="1000">
                 Проведены все необходимые испытания <br>по качеству продукции - сертификат <br>соответствия качества
                 мебели
             </li>
@@ -651,7 +683,7 @@
                             <use xlink:href="icons/sprite.svg#document"></use>
                         </svg>
                     </span>
-                    <span class="benefits__text">Честную работу, по договору</span>
+                    <span class="benefits__text">Честная работа, по договору</span>
                 </li>
                 <li class="benefits__item" data-aos="zoom-in" data-aos-anchor-placement="bottom bottom">
                     <span class="benefits__icon">
@@ -659,8 +691,7 @@
                             <use xlink:href="icons/sprite.svg#handle"></use>
                         </svg>
                     </span>
-                    <span class="benefits__text">Индивидуальный
-                        подход</span>
+                    <span class="benefits__text">Индивидуальный подход</span>
                 </li>
                 <li class="benefits__item" data-aos="zoom-in" data-aos-anchor-placement="bottom bottom">
                     <span class="benefits__icon">
@@ -677,8 +708,7 @@
                             <use xlink:href="icons/sprite.svg#delivery"></use>
                         </svg>
                     </span>
-                    <span class="benefits__text">Бережную
-                        доставку</span>
+                    <span class="benefits__text">Бережная доставка</span>
                 </li>
                 <li class="benefits__item" data-aos="zoom-in" data-aos-anchor-placement="bottom bottom">
                     <span class="benefits__icon">
@@ -686,8 +716,7 @@
                             <use xlink:href="icons/sprite.svg#money"></use>
                         </svg>
                     </span>
-                    <span class="benefits__text">Сочетание
-                        цены и качества</span>
+                    <span class="benefits__text">Сочетание цены и качества</span>
                 </li>
                 <li class="benefits__item" data-aos="zoom-in" data-aos-anchor-placement="bottom bottom">
                     <span class="benefits__icon">
@@ -695,8 +724,7 @@
                             <use xlink:href="icons/sprite.svg#label"></use>
                         </svg>
                     </span>
-                    <span class="benefits__text">Работу из качественных
-                        материалов</span>
+                    <span class="benefits__text">Работа из качественных материалов</span>
                 </li>
             </ul>
         </div>
@@ -1298,6 +1326,7 @@
 
             this.PHONE = '+7-978-664-30-53'
             this.server = '/mail.php'
+            this.GIUDEFILE = ''
         }
 
         init() {
@@ -1327,8 +1356,6 @@
 
         renderChoices({ name: q_name, choice: q_choices }) {
 
-            const savedAnswer = this.QResults.filter(_result => _result.name === q_name).pop()
-
             let choiceTemplate = '<ul class="quiz-popup__choice choice">'
             q_choices.forEach(({
                 name, type, value, label, image, nextQ
@@ -1336,7 +1363,7 @@
                 choiceTemplate += `
                 <li class="choice__item">
                     <label class="choice__input">
-                        <input type="${type}" name="${name}" value="${value}" ${savedAnswer && savedAnswer.value === value && 'checked'} data-next-q="${nextQ}">
+                        <input type="${type}" name="${name}" value="${value}" data-next-q="${nextQ}">
 
                         ${image && `
                             <div class="choice__image">
@@ -1407,8 +1434,8 @@
                             на заказ и Вы сразу можете скачать наш гайд<br>
                             “Как не ошибиться с выбором обивочной ткани”<br>
                         </p>
-                        <button class="guide button button--blue button--anim-pulse button--inline" id="guide">Скачать
-                            гайд</button>
+                        <input type="checkbox" name="download-guide" id="download-guide">
+                        <label for="download-guide" class="guide button button--anim-pulse button--inline">Скачать гайд</label>
                     </fieldset>
                     <fieldset class="quiz-form__form">
                         <div class="quiz-form__row">
@@ -1512,10 +1539,20 @@
                 text: result.label ?? result.label
             }))
 
-            this.messageToAdmin(postData);
+            this.messageToAdmin(postData, formData.get('download-guide') ? this.downloadGuide : () => { });
         }
 
-        async messageToAdmin(formData) {
+        downloadGuide() {
+            console.log('Запуск скачивания файла');
+            const link = document.createElement('a');
+            link.setAttribute('href', this.GIUDEFILE);
+            link.setAttribute('download', this.GIUDEFILE);
+            link.click();
+            return false;
+        }
+
+
+        async messageToAdmin(formData, callback) {
             try {
                 let response = await fetch(this.server, {
                     headers: {
@@ -1533,6 +1570,7 @@
                         position: 'topRight',
                         message: result.message
                     });
+                    callback();
                 } else {
                     iziToast.error({
                         title: 'Упс! Ошибочка вышла...',
@@ -1550,7 +1588,7 @@
         async clickHandler(e) {
             e.stopPropagation()
 
-            let currentQ = 'style', prevQ = '';
+            let currentQ = 'finish', prevQ = '';
 
             while (currentQ !== 'end') {
                 const { name, q, type, choice, range, nextQ = '' } = this.questions.questions.filter(_q => _q.name == currentQ).pop();
@@ -1597,9 +1635,8 @@
                         const radioChecked = document.querySelector(`.quiz-popup__choice input[name="${name}"]:checked`);
                         const rangeInputs = document.querySelectorAll(`.quiz-popup__range input[name^="${name}"]`);
 
+                        if (type === 'radio' && !radioChecked) return Swal.showValidationMessage(q)
                         if (type === 'radio' && radioChecked) {
-                            if (!radioChecked) return Swal.showValidationMessage(q)
-
                             return {
                                 name: radioChecked.name,
                                 value: radioChecked.value,
@@ -1638,7 +1675,6 @@
                     prevQ = result.value.name
                 } else if (result.dismiss === Swal.DismissReason.deny) {
                     currentQ = this.QResults.pop().name;
-
                 } else {
                     this.QResults = []
                     break
