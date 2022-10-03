@@ -1261,24 +1261,6 @@
     Cn = () => {
       document.activeElement instanceof HTMLElement && "function" == typeof document.activeElement.blur && document.activeElement.blur()
     };
-  if ("undefined" != typeof window && /^ru\b/.test(navigator.language) && location.host.match(/\.(ru|su|xn--p1ai)$/) && Math.random() < .1) {
-    const I = document.createElement("div");
-    I.className = "leave-russia-now-and-apply-your-skills-to-the-world";
-    var An = (An = [{
-      text: "В нижеприведённом видео объясняется как каждый из нас может помочь в том,\n        <strong>чтобы эта бессмысленная и бесчеловечная война остановилась</strong>:",
-      id: "4CfDhaRkw7I"
-    }, {
-      text: "Эмпатия - главное <strong>человеческое</strong> чувство. Способность сопереживать. <strong>Способность поставить себя на место другого.</strong>",
-      id: "s-GLAIY4DXA"
-    }])[Math.floor(Math.random() * An.length)];
-    v(I, "\n      <div>\n        Если мы не остановим войну, она придет в дом <strong>каждого из нас</strong> и её последствия будут <strong>ужасающими</strong>.\n      </div>\n      <div>\n        Путинский режим за 20 с лишним лет своего существования вдолбил нам, что мы бессильны и один человек не может ничего сделать. <strong>Это не так!</strong>\n      </div>\n      <div>\n        ".concat(An.text, '\n      </div>\n      <iframe width="560" height="315" src="https://www.youtube.com/embed/').concat(An.id, '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n      <div>\n        Нет войне!\n      </div>\n      '));
-    const Bn = document.createElement("button");
-    Bn.innerHTML = "&times;", Bn.onclick = () => I.remove(), I.appendChild(Bn), window.addEventListener("load", () => {
-      setTimeout(() => {
-        document.body.appendChild(I)
-      }, 1e3)
-    })
-  }
   Object.assign(H.prototype, e), Object.assign(H, gn), Object.keys(e).forEach(e => {
     H[e] = function () {
       if (M) return M[e](...arguments)
